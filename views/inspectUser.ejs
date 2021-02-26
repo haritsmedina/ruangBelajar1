@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Users</title>
+</head>
+<body>
+    <h1><%=data.combineName()%></h1>
+    <table border="1">
+        <thead>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Action</th>
+        </thead>
+        <% data.Subjects.forEach((element) => { %>
+            <tr>
+                <td><%=element.id%></td>
+                <td><%= element.category%></td>
+                <td><%= element.description%></td>
+                <td><%= element.Homework.status%></td>
+                <td>
+                    <a href="/user/<%= element.id%>/mark" >Mark as Finished</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

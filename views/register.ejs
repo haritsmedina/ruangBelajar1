@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up!</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="/register" method="POST">
+    <label for="firstName">First Name: </label><br>
+      <input type="text" name="firstName"><br> 
+      
+      <label for="lastName">Last Name: </label><br>
+      <input type="text" name="lastName"><br>  
+
+      <label for="name">Password</label><br>
+      <input type="text" name="password"><br>
+
+      <label for="email">email</label><br>
+      <input type="text" name="email" placeholder="e.g: student@gmail.com"><br>
+
+      <label for="genre">role</label>
+      <br>
+      <select name="role">
+          <option>--SELECT--</option>
+          <option value="user">user</option>
+          <option value="admin">admin</option>
+        </select>   
+        <br>
+        <br>
+        <button type="submit">signUp</button>
+       <button  href="/home"> cancel </a> </button>
+    </form>
+    
+</body>
+</html>

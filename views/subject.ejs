@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('navbar')%>
+    <h1>List Subjects</h1>
+    <a href="/add/subject"> Add </a>
+    <table border="1">
+        <thead>
+            <th>Id</th>
+            <th>description</th>
+            <th>category</th>
+            <th>action</th>            
+        </thead>
+        
+        <tbody>
+            <% data.forEach((element, index) =>{ %>
+                <tr>
+                    <td><%= element.id%></td>
+                    <td><%= element.description %></td>
+                    <td><%= element.category%></td>      
+              
+                    <td><a href="/subjects/<%=element.id%>/addTask">Add Task</a>
+                        <a href="subjects/<%=element.id%>/parts">Add Subject</a>
+                        <a href="/subjects/<%=element.id%>/delete"> Delete</a>
+                        <a href="/subject/<%= element.id %>/edit">Edit Subject</a></td>
+                </tr>
+                <% }) %>
+
+        </tbody>
+    </table>
+</body>
+</html>
